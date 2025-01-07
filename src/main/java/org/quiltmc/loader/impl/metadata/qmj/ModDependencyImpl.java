@@ -34,7 +34,7 @@ import org.quiltmc.loader.impl.util.QuiltLoaderInternal;
 import org.quiltmc.loader.impl.util.QuiltLoaderInternalType;
 
 @QuiltLoaderInternal(QuiltLoaderInternalType.LEGACY_EXPOSED)
-public final class ModDependencyImpl {
+final class ModDependencyImpl {
 	ModDependencyImpl() {
 	}
 
@@ -103,7 +103,7 @@ public final class ModDependencyImpl {
 		}
 	}
 
-	public static final class OnlyImpl implements ModDependency.Only {
+	static final class OnlyImpl implements ModDependency.Only {
 		private final String location;
 		private final ModDependencyIdentifier id;
 		private final VersionRange range;
@@ -114,10 +114,10 @@ public final class ModDependencyImpl {
 		/**
 		 * Creates a ModDependency that matches any version of a specific mod id.
 		 */
-		public OnlyImpl(String location, ModDependencyIdentifier id) {
+		OnlyImpl(String location, ModDependencyIdentifier id) {
 			this(location, id, VersionRange.ANY, "", false, null);
 		}
-		public OnlyImpl(String location, ModDependencyIdentifier id, VersionRange range, @Nullable String reason, boolean optional, @Nullable ModDependency unless) {
+		OnlyImpl(String location, ModDependencyIdentifier id, VersionRange range, @Nullable String reason, boolean optional, @Nullable ModDependency unless) {
 			// We need to have at least one constraint
 			if (range.isEmpty()) {
 				throw new IllegalArgumentException("A ModDependency must have at least one constraint");
