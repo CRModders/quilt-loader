@@ -44,12 +44,12 @@ public final class PluginIconImpl extends QuiltGuiSyncBase implements QuiltLoade
 	final IconType icon;
 	final IconType[] subIcons = new IconType[4];
 
-	public PluginIconImpl() {
+	PluginIconImpl() {
 		super(null);
 		this.icon = new BlankIcon();
 	}
 
-	public PluginIconImpl(String path) {
+	PluginIconImpl(String path) {
 		super(null);
 		this.icon = new BuiltinIcon(path);
 	}
@@ -61,7 +61,7 @@ public final class PluginIconImpl extends QuiltGuiSyncBase implements QuiltLoade
 	}
 
 	/** @param images Array of images of different sizes, to be chosen by the UI. */
-	public PluginIconImpl(byte[][] images) {
+	PluginIconImpl(byte[][] images) {
 		super(null);
 		this.icon = new UploadedIcon(images);
 	}
