@@ -1,3 +1,9 @@
+> [!IMPORTANT]
+> Cosmic Quilt has no guarantee of continued support.\
+> This repositry may no longer receive updates.
+> 
+> It is still avaliable for old mods.
+
 quilt-loader
 ===========
 
